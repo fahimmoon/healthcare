@@ -1,0 +1,115 @@
+body {
+    background-color: #0D1B2A;
+    color: #C5C6C7;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #E0E1DD;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #415A77;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #778DA9;
+    transform: translateY(-2px);
+}
+
+.text-accent {
+    color: #3FC1C9;
+}
+
+.text-highlight {
+    color: #FFD700;
+}
+
+.card {
+    background-color: #1B263B;
+    border: 1px solid #415A77;
+}
+
+.form-control {
+    background-color: #1B263B;
+    border: 1px solid #415A77;
+    color: #E0E1DD;
+}
+
+.form-control:focus {
+    background-color: #1B263B;
+    border-color: #3FC1C9;
+    box-shadow: 0 0 0 0.25rem rgba(63, 193, 201, 0.25);
+    color: #E0E1DD;
+}
+
+// ...existing code...
+
+/* Remove or comment out any existing hero section styles */
+/* Hero Section styles moved to components/hero/hero.css */
+
+// ...existing code...
+
+/* Services Section */
+.service-card {   border: 1px solid rgba(65, 90, 119, 0.1);
+    background: rgba(27, 38, 59, 0.8);    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;service-card:hover {
+}    transform: translateY(-10px);
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+   color: #3FC1C9;
+.service-icon {    margin-bottom: 1.5rem;
+    font-size: 3rem;0.3s ease;
+    color: #3FC1C9;
+    margin-bottom: 1.5rem;
+}service-card:hover .service-icon {
+    transform: scale(1.1);
+/* Testimonials Section */
+.testimonials-section {
+    background: linear-gradient(#091A2E, #1B263B);*/
+}
+    background: linear-gradient(45deg, #FF6B6B, #FFA07A);
+    -webkit-background-clip: text;.testimonial-item {
+    background-clip: text;
+    color: transparent;    padding: 2rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add more section styles as needed */}    border-radius: 15px;    padding: 2rem;    background: rgba(27, 38, 59, 0.5);.testimonial-item {}    background: linear-gradient(#091A2E, #1B263B);.testimonials-section {/* Testimonials Section */}    color: transparent;    background-clip: text;    -webkit-background-clip: text;    background: linear-gradient(45deg, #A8E6CF, #3FC1C9);.gradient-icon-3 {}    color: transparent;    background-clip: text;    -webkit-background-clip: text;    background: linear-gradient(45deg, #4ECDC4, #3FC1C9);.gradient-icon-2 {}    border-radius: 15px;
+}
+
+/* Add more section styles as needed */
