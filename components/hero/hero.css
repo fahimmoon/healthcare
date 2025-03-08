@@ -1,0 +1,85 @@
+.hero-section {
+    min-height: 100vh;
+    background: url('../../images/hero-bg.jpg') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: calc(76px + 2rem); /* Increased padding to account for navbar */
+    margin-top: 0; /* Remove any margin */
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(13, 27, 42, 0.95),
+        rgba(27, 38, 59, 0.85)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 3rem 0; /* Added more vertical padding */
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    background: linear-gradient(45deg, #3FC1C9, #91BAD6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: #E0E1DD;
+    opacity: 0.9;
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #3FC1C9, #4ECDC4);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(63, 193, 201, 0.4);
+}
+
+.hero-features {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #E0E1DD;
+}
+
+.feature-icon {
+    color: #3FC1C9;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: calc(71px + 1rem); /* Adjusted for mobile navbar height */
+    }
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-features {
+        justify-content: center;
+    }
+}
