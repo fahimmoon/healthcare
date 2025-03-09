@@ -1,0 +1,71 @@
+.testimonials-section h2 {
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.testimonial-card {
+    background: var(--bg-dark);
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--success));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+    transform: scaleX(1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.testimonial-card i {
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover i {
+    transform: scale(1.1);
+}
+
+.testimonial-text {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.user-info h5 {
+    color: var(--text-accent);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.user-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    opacity: 1;
+}
+
+.stars {
+    color: var(--warning); /* Yellow color for stars */
+    margin-bottom: 1rem;
+}
