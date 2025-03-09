@@ -1,0 +1,128 @@
+.resource-card {
+    background: var(--bg-dark);
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.resource-card h3 {
+    color: var(--text-accent);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.resource-card p {
+    color: var(--text-secondary);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--success));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover::before {
+    transform: scaleX(1);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.resource-card i {
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover i {
+    transform: scale(1.1);
+}
+
+.resource-icon {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    display: inline-block;
+    animation: floatY 3s ease-in-out infinite;
+}
+
+.resource-icon i {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+}
+
+.resource-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+.resource-count {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    opacity: 1;
+}
+
+.newsletter-card {
+    background: linear-gradient(135deg, rgba(27, 38, 59, 0.95), rgba(13, 27, 42, 0.9));
+}
+
+.newsletter-form .input-group {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 0.3rem;
+}
+
+.newsletter-form .form-control {
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    padding-left: 1.5rem;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.newsletter-form .btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    margin: 2px;
+}
+
+.gradient-icon-1 {
+    background: linear-gradient(45deg, var(--primary), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-icon-2 {
+    background: linear-gradient(45deg, var(--info), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-icon-3 {
+    background: linear-gradient(45deg, var(--warning), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
