@@ -1,7 +1,7 @@
 .navbar {
     background-color: #1B263B;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     transition: all 0.3s ease;
 }
 
@@ -11,13 +11,14 @@
 }
 
 .nav-link {
-    color: #C5C6C7 !important;
-    padding: 0.5rem 1rem;
+    color: var(--text-secondary) !important;
+    padding: 0.4rem 0.8rem;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .nav-link:hover {
-    color: #91BAD6 !important;
+    color: var(--text-accent) !important;
     transform: translateY(-2px);
 }
 
@@ -42,10 +43,11 @@
 
 .navbar-brand {
     color: #E0E1DD !important;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     display: flex;
     align-items: center;
+    font-family: var(--font-heading);
 }
 
 .dropdown-menu {
@@ -54,12 +56,12 @@
 }
 
 .dropdown-item {
-    color: #C5C6C7;
+    color: var(--text-secondary);
 }
 
 .dropdown-item:hover {
-    background-color: #415A77;
-    color: #E0E1DD;
+    background-color: rgba(63, 193, 201, 0.1);
+    color: var(--text-accent);
 }
 
 .navbar-toggler {
