@@ -1,0 +1,94 @@
+.counseling-hero {
+    background: linear-gradient(135deg, var(--bg-dark), var(--dark));
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.counseling-hero h1 {
+    background: linear-gradient(45deg, var(--primary), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.counseling-type {
+    background: rgba(27, 38, 59, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    border: 1px solid rgba(63, 193, 201, 0.2);
+    transition: all 0.3s ease;
+}
+
+.counseling-type:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.type-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.benefit-card {
+    background: rgba(13, 27, 42, 0.5);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(63, 193, 201, 0.1);
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--info));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.approach-section {
+    background: linear-gradient(135deg, var(--bg-dark), var(--dark));
+    padding: 4rem 0;
+}
+
+.approach-card {
+    background: rgba(27, 38, 59, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    border: 1px solid rgba(63, 193, 201, 0.2);
+}
+
+.approach-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(63, 193, 201, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.approach-icon i {
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, var(--primary), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section-divider {
+    border-top: 1px solid rgba(63, 193, 201, 0.2);
+    margin: 4rem 0;
+}
