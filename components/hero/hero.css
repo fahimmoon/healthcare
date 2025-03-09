@@ -1,10 +1,10 @@
 .hero-section {
-    min-height: 100vh;
-    background: url('../../images/hero-bg.jpg') center/cover;
+    min-height: 85vh;
+    background: url('/images/hero-bg.jpg') center/cover;
     position: relative;
     display: flex;
     align-items: center;
-    padding-top: calc(76px + 2rem); /* Increased padding to account for navbar */
+    padding-top: 60px;
     margin-top: 0; /* Remove any margin */
 }
 
@@ -26,7 +26,7 @@
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     background: linear-gradient(45deg, #3FC1C9, #91BAD6);
     -webkit-background-clip: text;
     background-clip: text;
@@ -36,7 +36,7 @@
 }
 
 .hero-subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: #E0E1DD;
     opacity: 0.9;
 }
@@ -55,7 +55,7 @@
 
 .hero-features {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -64,6 +64,7 @@
     align-items: center;
     gap: 0.5rem;
     color: #E0E1DD;
+    font-size: 0.9rem;
 }
 
 .feature-icon {
