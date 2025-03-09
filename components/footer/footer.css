@@ -1,24 +1,42 @@
 .footer {
-    background-color: #0A192F;
-    color: #C5C6C7;
+    background-color: var(--dark);
+    color: var(--text-secondary);
     position: relative;
+    z-index: 1000; /* Lower z-index than chat */
 }
 
 /* Top Section */
 .footer-top {
-    background-color: #091A2E;
-    border-bottom: 1px solid #415A77;
+    background: linear-gradient(to right, var(--bg-dark), var(--dark));
+    border-bottom: 1px solid rgba(63, 193, 201, 0.2);
+    padding: 2rem 0;
+}
+
+.footer-logo .gradient-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary), var(--success));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .footer-tagline {
+    color: var(--secondary);
     max-width: 600px;
     margin: 0 auto;
-    color: #91BAD6;
 }
 
 /* Middle Section */
 .footer-middle {
     border-bottom: 1px solid #415A77;
+    padding: 2rem 0;
 }
 
 .footer-brand .brand-icon {
@@ -27,9 +45,22 @@
 }
 
 .footer-heading {
-    color: #E0E1DD;
+    color: var(--primary);
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary), transparent);
 }
 
 .footer-description {
@@ -48,21 +79,28 @@
 }
 
 .footer-links a {
-    color: #C5C6C7;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
 }
 
 .footer-links a i {
+    color: var(--primary);
     font-size: 0.8rem;
     margin-right: 0.5rem;
-    color: #3FC1C9;
+    transition: transform 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #3FC1C9;
+    color: var(--primary);
     transform: translateX(5px);
+}
+
+.footer-links a:hover i {
+    transform: rotate(45deg);
 }
 
 /* Contact Info Styling */
@@ -84,31 +122,43 @@
 }
 
 .social-links a {
-    color: #C5C6C7;
-    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--bg-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
     transition: all 0.3s ease;
+    margin: 0 5px;
 }
 
-social-links a:hover {
-    color: #3FC1C9;
+.social-links a:hover {
+    background: var(--primary);
+    color: var(--dark);
     transform: translateY(-3px);
 }
 
 /* Newsletter Form */
 .newsletter-form .input-group {
-    background-color: rgba(65, 90, 119, 0.1);
+    background: var(--bg-dark);
     border-radius: 50px;
-    overflow: hidden;
+    padding: 5px;
+    border: 1px solid rgba(63, 193, 201, 0.2);
 }
 
 .newsletter-form .form-control {
     border: none;
-    padding: 0.8rem 1.5rem;
+    background: transparent;
+    color: var(--text-primary);
+    padding-left: 1.5rem;
 }
 
 .newsletter-form .btn {
-    border-radius: 0 50px 50px 0;
+    border-radius: 50px;
     padding: 0.8rem 1.5rem;
+    margin: 2px;
 }
 
 .newsletter-form .form-control:focus {
@@ -116,7 +166,7 @@ social-links a:hover {
 }
 
 .contact-info {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .contact-info i {
@@ -124,10 +174,12 @@ social-links a:hover {
 }
 
 .footer-bottom {
-    background-color: #091A2E;
-    border-top: 1px solid #415A77;
+    background: var(--dark);
+    border-top: 1px solid rgba(63, 193, 201, 0.2);
     padding-top: 1.5rem;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 1000; /* Lower z-index than chat widget */
 }
 
 .legal-links {
@@ -151,30 +203,41 @@ social-links a:hover {
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 40px;
-    height: 40px;
-    background-color: #415A77;
-    color: #E0E1DD;
+    bottom: 120px;
+    right: 100px; /* Move to the left of chat widget */
+    background: linear-gradient(45deg, var(--primary), var(--success));
+    color: var(--light);
     border: none;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     opacity: 0;
+    visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
 }
 
 .back-to-top.visible {
     opacity: 1;
+    visibility: visible;
 }
 
 .back-to-top:hover {
-    background-color: #778DA9;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(63, 193, 201, 0.4);
+}
+
+.language-selector {
+    background: var(--bg-dark);
+    border: 1px solid var(--primary);
+    color: var(--text-primary);
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
 }
 
 .language-selector select {
@@ -195,5 +258,25 @@ social-links a:hover {
     
     .language-selector {
         margin-top: 1rem;
+    }
+
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .legal-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }
