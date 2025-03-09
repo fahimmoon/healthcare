@@ -24,9 +24,9 @@
                         <i class="fas fa-hands-helping d-lg-none me-2"></i>Services
                     </a>
                     <ul class="dropdown-menu animate slideIn">
-                        <li><a class="dropdown-item" href="services.html#screening">Mental Health Screening</a></li>
-                        <li><a class="dropdown-item" href="services.html#counseling">Professional Counseling</a></li>
-                        <li><a class="dropdown-item" href="services.html#support">24/7 Support</a></li>
+                        <li><a class="dropdown-item" href="screening.html">Mental Health Screening</a></li>
+                        <li><a class="dropdown-item" href="counseling.html">Professional Counseling</a></li>
+                        <li><a class="dropdown-item" href="support.html">24/7 Support</a></li>
                     </ul>
                 </li>
                 <li class="nav-item d-lg-none">
@@ -47,11 +47,23 @@
                         <i class="fas fa-user"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="login.html">Login</a></li>
-                        <li><a class="dropdown-item" href="login.html#register">Register</a></li>
+                        <li class="auth-required"><a class="dropdown-item" href="pages/login.html">Login</a></li>
+                        <li class="auth-required"><a class="dropdown-item" href="pages/signup.html">Sign Up</a></li>
+                        <li class="user-only" style="display: none;">
+                            <a class="dropdown-item" href="pages/profile.html">Profile Settings</a>
+                        </li>
+                        <li class="user-only" style="display: none;">
+                            <a class="dropdown-item" href="#" onclick="handleLogout()">Logout</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<script>
+function handleLogout() {
+    localStorage.removeItem('currentUser');
+    window.location.href = window.location.pathname.includes('/pages/') ? '../index.html' : 'index.html';
+}
+</script>
